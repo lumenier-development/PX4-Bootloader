@@ -207,6 +207,11 @@ AP_HW_CUBEBLACK_PERIPH               1401
 AP_HW_PIXRACER_PERIPH                1402
 AP_HW_SWBOOMBOARD_PERIPH             1403
 
+#IDs 5600-5699 reserved for ZeroOne
+AP_HW_ZeroOne_X6                     5600
+AP_HW_ZeroOne_PMU                    5601
+AP_HW_ZeroOne_GNSS                   5602
+
 # OpenDroneID enabled boards. Use 10000 + the base board ID
 AP_HW_CubeOrange_ODID               10140
 AP_HW_Pixhawk6_ODID                 10053
