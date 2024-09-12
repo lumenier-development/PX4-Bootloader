@@ -68,6 +68,7 @@ TARGETS	= \
 	fmuk66e_bl \
 	fmuk66v3_bl \
 	kakutef7_bl \
+	lum_ndaa_f7_bl \
 	mindpxv2_bl \
 	modalai_fc_v1_bl \
 	modalai_voxl2_io_bl \
@@ -190,6 +191,9 @@ thepeach_k1_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 
 thepeach_r1_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f4 TARGET_HW=THE_PEACH_R1 LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+lum_ndaa_f7_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
+	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=LUM_NDAA_F7 LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@
 	
 # Default bootloader delay is *very* short, just long enough to catch
 # the board for recovery but not so long as to make restarting after a

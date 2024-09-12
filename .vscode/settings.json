@@ -1,0 +1,7 @@
+{
+    "ros.distro": "jazzy",
+    "files.associations": {
+        "compare": "c",
+        "cstdint": "c"
+    }
+}
