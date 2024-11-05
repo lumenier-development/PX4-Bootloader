@@ -86,15 +86,22 @@ usb_device_interface_struct_t g_UsbDeviceCdcVcomDataInterface[] = {
 
 /* Define interfaces for virtual com */
 usb_device_interfaces_struct_t g_UsbDeviceCdcVcomInterfaces[USB_CDC_VCOM_INTERFACE_COUNT] = {
-	{
-		USB_CDC_VCOM_CIC_CLASS, USB_CDC_VCOM_CIC_SUBCLASS, USB_CDC_VCOM_CIC_PROTOCOL, USB_CDC_VCOM_COMM_INTERFACE_INDEX,
-		g_UsbDeviceCdcVcomCommunicationInterface,
-		sizeof(g_UsbDeviceCdcVcomCommunicationInterface) / sizeof(usb_device_interfaces_struct_t)
-	},
-	{
-		USB_CDC_VCOM_DIC_CLASS, USB_CDC_VCOM_DIC_SUBCLASS, USB_CDC_VCOM_DIC_PROTOCOL, USB_CDC_VCOM_DATA_INTERFACE_INDEX,
-		g_UsbDeviceCdcVcomDataInterface, sizeof(g_UsbDeviceCdcVcomDataInterface) / sizeof(usb_device_interfaces_struct_t)
-	},
+    {
+        USB_CDC_VCOM_CIC_CLASS, 
+        USB_CDC_VCOM_CIC_SUBCLASS, 
+        USB_CDC_VCOM_CIC_PROTOCOL, 
+        USB_CDC_VCOM_COMM_INTERFACE_INDEX,
+        g_UsbDeviceCdcVcomCommunicationInterface,
+        sizeof(g_UsbDeviceCdcVcomCommunicationInterface) / sizeof(usb_device_interface_struct_t) // Correct size calculation
+    },
+    {
+        USB_CDC_VCOM_DIC_CLASS, 
+        USB_CDC_VCOM_DIC_SUBCLASS, 
+        USB_CDC_VCOM_DIC_PROTOCOL, 
+        USB_CDC_VCOM_DATA_INTERFACE_INDEX,
+        g_UsbDeviceCdcVcomDataInterface, 
+        sizeof(g_UsbDeviceCdcVcomDataInterface) / sizeof(usb_device_interface_struct_t) // Correct size calculation
+    },
 };
 
 /* Define configurations for virtual com */
