@@ -818,7 +818,7 @@
  # define INTERFACE_USB                  1
  # define INTERFACE_USART                0
  # define USBDEVICESTRING                "PX4 BL NDAA-F7"
- # define USBPRODUCTID                   0x0001
+ # define USBPRODUCTID                   0x0016
  # define USBMFGSTRING                   "Lumenier"
  # define BOOT_DELAY_ADDRESS             0x00000200
  
