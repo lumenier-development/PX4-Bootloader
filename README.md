@@ -1,6 +1,16 @@
-# Bootloader for the Pixhawk board family
+# Bootloader for PX4 on STM32F1/F3/F4/F7
 
-[![GitHub Actions Status](https://github.com/PX4/PX4-Bootloader/workflows/Build%20and%20Deploy/badge.svg?branch=master)](https://github.com/PX4/PX4-Bootloader/actions?query=branch%3Amaster)
+[![GitHub Actions Status](https://github.com/PX4/PX4-Bootloader/actions/workflows/main.yaml/badge.svg)](https://github.com/PX4/PX4-Bootloader/actions/workflows/main.yaml)
+
+**Note that bootloaders for STM32H7 are in [PX4](https://github.com/PX4/PX4-Autopilot) tree.**
+
+This repository is just for legacy bootloaders on STM32F1/F3/F4/F7.
+
+## Board IDs board_types.txt
+
+This repository also serves to keep track of board IDs for PX4 in [board_types.txt](https://github.com/PX4/PX4-Bootloader/blob/main/board_types.txt).
+
+It should be kept in sync with [ArduPilot's board_types.txt](https://github.com/ArduPilot/ardupilot/blob/master/Tools/AP_Bootloader/board_types.txt) as much as possible.
 
 ## Build instructions
 
@@ -22,8 +32,8 @@ License: LGPL3 for libopencm3, BSD-3-clause for core bootloader (see [LICENSE.md
 
 ## Contact
 
-  * Chat: [Dronecode Slack](http://slack.px4.io)
-  * Forum: [Dronecode Discuss](http://discuss.px4.io)
+  * Chat: [Dronecode Discord](https://discord.gg/dronecode)
+  * Forum: [Dronecode Discuss](https://discuss.px4.io)
 
 ## Bootloader Usage
 

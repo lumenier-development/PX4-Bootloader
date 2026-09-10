@@ -1,0 +1,22 @@
+name: Check for Board Assignment Conflicts
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  check:
+    name: Check for Conflicts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          # Need full history so the script can diff against the PR base ref.
+          fetch-depth: 0
+
+      - name: Run Test
+        run: |
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          ./Tools/check_board_types_conflicts.sh "origin/${{ github.base_ref }}"
